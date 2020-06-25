@@ -1,0 +1,23 @@
+{
+  "name": "preact-debug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@types/navigo": "7.0.1",
+    "htm": "3.0.4",
+    "navigo": "7.1.2",
+    "preact": "10.4.4",
+    "preact-compat": "3.19.0",
+    "redux": "4.0.5",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}

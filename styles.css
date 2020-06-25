@@ -1,0 +1,118 @@
+/* base */
+body,
+html {
+  background-color: #011627;
+  font-family: "Fira Code";
+  color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+code {
+  font-family: "Fira Mono";
+}
+
+a {
+  color: white;
+}
+
+/* navigo link */
+a[data-navigo] {
+  font-size: 1.75rem;
+  text-decoration: none;
+  color: #ffffff1c;
+}
+
+a[data-navigo]:hover {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: transparent;
+  border: 1.5px solid white;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 1.5px solid white;
+}
+
+/* stack */
+[class^="dio-stack"] > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dio-stack > * + *,
+.dio-stack--small > * + * {
+  margin-top: 1.5rem;
+}
+
+.dio-stack--large > * + * {
+  margin-top: 3rem;
+}
+
+/* columns */
+[class^="dio-columns"] {
+  display: flex;
+  flex-direction: row;
+}
+
+.dio-columns--gap-1 > * + * {
+  margin-left: 1rem;
+}
+
+.dio-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* inline */
+.dio-inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.dio-inline--gap-1 > * + * {
+  margin-left: 1rem;
+}
+
+/* alignment/placement */
+.dio-align--center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dio-width--fill {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.dio-height--fill {
+  height: 100%;
+  flex-grow: 1;
+}
+
+/* slides */
+main[data-id] {
+  transition: transform 0.5s ease-out;
+  transform: translateX(0%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
