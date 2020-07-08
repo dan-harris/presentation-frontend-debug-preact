@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "jsx": "preserve",
+    "jsx": "react",
+    "jsxFactory": "h",
     "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": true,

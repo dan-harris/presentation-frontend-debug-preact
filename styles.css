@@ -116,3 +116,47 @@ main[data-id] {
   height: 100%;
   width: 100%;
 }
+
+.dio_breakpoints-hover-menu-button {
+  position: relative;
+}
+
+.dio_breakpoints-hover-menu-button:hover > .dio_breakpoints-hover-menu {
+  display: block;
+}
+
+.dio_breakpoints-hover-menu {
+  display: none;
+  position: absolute;
+  bottom: -4rem;
+  margin: 0;
+  border: 2px solid white;
+  padding: 0.75rem;
+  transform: translateX(-2.25rem);
+  width: 4rem;
+}
+
+.dio_breakpoints-hover-menu--programatic {
+  display: block;
+  position: absolute;
+  bottom: -4rem;
+  margin: 0;
+  border: 2px solid white;
+  padding: 0.75rem;
+  transform: translateX(-2.25rem);
+  width: 4rem;
+}
+
+.dio_breakpoints-hover-menu--programatic::after,
+.dio_breakpoints-hover-menu::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  position: absolute;
+  top: -0.6rem;
+  left: 2.25rem;
+  transform: rotate(45deg);
+  background-color: #021728;
+}
