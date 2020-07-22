@@ -1,9 +1,10 @@
 import { render, html } from "./_preact";
 import { useState, useCallback } from "preact/hooks";
 import { h } from "preact";
+import { memo } from "preact/compat";
 
 // #region 4... ⚛️ Devtools
-const MakeAPizza = ({ pizzaCount = 10000 }) => {
+const MakeAPizza = memo(({ pizzaCount = 2 }) => {
   const emptyArray = Array.from(new Array(pizzaCount));
   return (
     <div class="dio-box dio-width-max">
@@ -14,7 +15,7 @@ const MakeAPizza = ({ pizzaCount = 10000 }) => {
       </div>
     </div>
   );
-};
+});
 
 const PizzaCount = ({ count }) => {
   return <code>Amount: x {count}</code>;
@@ -27,8 +28,9 @@ const Price = ({ price }) => {
 // main
 const PizzaList = () => {
   const [renderCount, setRenderCount] = useState(10000);
+  const counts = [10000, 9000, 8000];
   const handleRender = useCallback(() => {
-    setRenderCount(Math.floor(Math.random() * 10000));
+    setRenderCount(counts[Math.round(Math.random() * 2)]);
   }, [setRenderCount]);
   return (
     <div class="dio-stack dio-align--center">
@@ -45,5 +47,5 @@ const PizzaList = () => {
 // #endregion
 
 // #region blerg
-render(<PizzaList />, document.querySelector("#root-devtools-profiler"));
+render(<PizzaList />, document.querySelector("#root-bonus-memo"));
 // #endregion

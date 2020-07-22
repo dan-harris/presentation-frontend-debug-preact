@@ -1,7 +1,7 @@
 import { render, html } from "./_preact";
 import { useState, useCallback } from "preact/hooks";
 
-// #region 2... 💔 Breakpoints
+// #region 2... 💔 Breakpoints console.log
 
 // garnish a food with some fruit
 const logPizza = () => {
@@ -24,7 +24,9 @@ const logPizzaStringify = () => {
 
 // #endregion
 
-// #region 3... 💔 Breakpoints
+// 3... 💔 Breakpoints :hover
+
+// #region 4... 💔 Breakpoints source
 
 // source breakpoints
 function PizzaOrder() {
@@ -34,7 +36,8 @@ function PizzaOrder() {
   });
   const setTopping = useCallback(
     topping => {
-      setPizzaOrder({ ...pizzaOrder, topping });
+      const newPizzaOrder = { ...pizzaOrder, topping };
+      setPizzaOrder(newPizzaOrder);
     },
     [pizzaOrder]
   );

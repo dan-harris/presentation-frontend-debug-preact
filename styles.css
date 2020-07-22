@@ -41,6 +41,8 @@ button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   cursor: pointer;
+  color: white;
+  font-family: "Fira Code";
 }
 
 button:hover {
@@ -159,4 +161,15 @@ main[data-id] {
   left: 2.25rem;
   transform: rotate(45deg);
   background-color: #021728;
+}
+
+.dio-width-max {
+  max-width: 29rem;
+  overflow: scroll;
+}
+
+.dio_devtools-pizza {
+  padding: 0.5rem;
+  display: inline-block;
+  font-size: 2rem;
 }
