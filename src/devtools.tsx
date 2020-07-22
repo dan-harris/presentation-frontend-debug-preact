@@ -7,7 +7,7 @@ const Toppings = ({ toppings, setTopping }) => {
   return (
     <div class="dio-inline dio-inline--gap-1 dio-align--center">
       {toppings.map(topping => (
-        <button onClick={() => setTopping(topping)}>${topping}</button>
+        <button onClick={() => setTopping(topping)}>{topping}</button>
       ))}
     </div>
   );

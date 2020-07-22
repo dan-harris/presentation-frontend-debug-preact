@@ -26,12 +26,20 @@ const Price = ({ price }) => {
 
 // main
 const PizzaList = () => {
+  const [renderCountInput, setRenderCountInput] = useState(10000);
   const [renderCount, setRenderCount] = useState(10000);
   const handleRender = useCallback(() => {
-    setRenderCount(Math.floor(Math.random() * 10000));
-  }, [setRenderCount]);
+    setRenderCount(Number(renderCountInput));
+  }, [setRenderCount, renderCountInput]);
   return (
     <div class="dio-stack dio-align--center">
+      <div class="dio-inline dio-inline--gap-1 dio-align--center">
+        <input
+          type="text"
+          value={renderCountInput}
+          onChange={e => setRenderCountInput(e.target.value)}
+        />
+      </div>
       <div class="dio-inline dio-inline--gap-1 dio-align--center">
         <button onClick={handleRender}>render</button>
       </div>

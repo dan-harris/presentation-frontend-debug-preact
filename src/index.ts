@@ -34,3 +34,4 @@ const setSlide = async (id: string) => {
 const router = new Navigo(null, true);
 
 router.on("slide/:id", ({ id }) => setSlide(id)).resolve();
+router.navigate("slide/1");
